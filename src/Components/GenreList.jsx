@@ -1,8 +1,8 @@
-import { genres } from '../mock-data/genres';
+import { genres } from "../mock-data/genres";
 
-function GenreList({ genres }) {
+const GenreList = ({ onGenreClick }) => {
     const renderedGenres = genres.map((genre) => {
-        return <li key={genre.id}>{genre.name}</li>
+        return <li key={genre.id} onClick={() => onGenreClick(genre.name)}>{genre.name}</li>
     });
 
 	return(
@@ -10,7 +10,7 @@ function GenreList({ genres }) {
             <h1>Genre List</h1>
             <ul>{renderedGenres}</ul>
         </div>
-    )
-}
+    );
+};
 
 export default GenreList;

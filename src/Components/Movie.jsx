@@ -1,12 +1,13 @@
 const Movie = ({ movieObj }) => {
-    return(
+    const {title, genre, director, yearReleased} = movieObj;
+    return (
         <div>
-            <h1>{ movieObj.title }</h1>
-            <p>{ movieObj.genre }</p>
-            <p>{ movieObj.director }</p>
-            <p>{ movieObj.yearReleased }</p>
+            <h1>{title}</h1>
+            <p>Genre: {genre}</p>
+            <p>Director: {director}</p>
+            <p>Year: {yearReleased}</p>
         </div>
-    )
+    );
 
 };
 
